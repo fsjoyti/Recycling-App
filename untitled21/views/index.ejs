@@ -65,12 +65,12 @@
         </div>
 
           <div class="results">
-              <div class="pass" ng-show="searchPass" ng-hide="searchFail">
+              <div class="pass" ng-show="searchPass">
                 <p>"Yes, you CAN recycle this in your zip code!</p>
                 <p>{{centerAddress.address}}</p>
                 <p>{{centerAddress.city}}, WA {{centerAddress.zipcode}}</p>
               </div>
-              <div class="fail" ng-show="searchFail" ng-hide="searchPass">
+              <div class="fail" ng-hide="searchPass">
                   <p>No, sorry, your zip code does not recycle this RIC</p>
               </div>
           </div>
