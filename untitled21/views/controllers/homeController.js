@@ -4,6 +4,15 @@
 var recycleApp = angular.module('recycleApp', []);
 
 recycleApp.controller('InfoCtrl', ['$scope', '$http',
-    function($scope, $rootScope, $http){
-       
-}]);
+
+    function($scope, $http){
+        console.log("Inside the controller");
+
+        $scope.resins = [1, 2, 3, 4, 5, 6, 7];
+
+        $scope.getInfo = function(){
+            console.log($scope.resin);
+            //$http.get()
+        };
+
+    }]);

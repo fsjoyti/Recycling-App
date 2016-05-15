@@ -26,7 +26,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 
-
 http.listen(3001,function () {
   console.log("Example app listening at http://localhost:3001");
 });
