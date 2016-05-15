@@ -27,7 +27,8 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
             }).then(function successCallback(response) {
                 console.log(response);
                 if (response.data != null) {
-                    console.log(response.data.location[0].address);
+                    $scope.centerAddress = response.data.location[0];
+                    console.log(response.data.location[0]);
                     $scope.result = "Yes, you CAN recycle this in your zip code!";
                 }
                 else {

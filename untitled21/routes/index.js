@@ -19,7 +19,7 @@ module.exports = function(app){
 
       if (error)res.send(error);
       else {
-        console.log(recycle);
+        console.log(recycle.location[0]);
         res.json(recycle);
       }
     }).limit(1);
