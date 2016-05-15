@@ -13,15 +13,7 @@
         <h1>Can I Recycle This?</h1>
         <div class ="selectResin">
             <p>Select a resin number to get recycling information:
-            <select ng-model="resin">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-            </select>
+            <select ng-options="resin for resin in resins" ng-model="resinID"></select>
             </p>
         </div>
         <div class="buttons">
