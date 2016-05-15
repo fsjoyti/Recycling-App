@@ -67,29 +67,30 @@ var RecyclingModel = mongoose.model('Recycling', ResinSchema);
 module.exports = mongoose.model('Recycling',ResinSchema);
 RecyclingModel.insert(
     {
-        recipeID: 1,
-        recipeName: 'Chicken',
-        categoryID: 1,
-        recipeInstructions: 'Boil chicken',
-        ingredientIDs: [{ingredientID: 1}]
+        RecycleId: Number,
+        number :  Number,
+        description:String,
+        examples : {type:Array},
+        locationIDs: [{locationID: 1}]
     }
 );
 RecyclingModel.insert(
     {
-        recipeID: 2,
-        recipeName: 'Ferret treat',
-        categoryID: 3,
-        recipeInstructions: 'Put olive oil on ferret bellies',
-        ingredientIDs: [{ingredientID: 2}]
+        RecycleId: Number,
+        number :  Number,
+        description:String,
+        examples : {type:Array},
+        locationIDs: [{locationID: 2}]
+
     }
 );
 RecyclingModel.insert(
     {
-        recipeID: 3,
-        recipeName: 'Broccoli Snack',
-        categoryID: 2,
-        recipeInstructions: 'Boil broccoli until mostly cooked, then saute in olive oil for 5-10 minutes',
-        ingredientIDs: [{ingredientID: 2}, {ingredientID: 3}]
+        RecycleId: Number,
+        number :  Number,
+        description:String,
+        examples : {type:Array},
+        locationIDs: [{locationID:3 }]
     }
 );
 
