@@ -21,7 +21,7 @@ a {
   opacity: 0.8;
   text-align: center;
   height: 600px !important;
-  overflow: auto;
+  overflow-y: auto !important;
 }
 
 .selectResin, .buttons, .popupText, .recycle_info {
