@@ -33,7 +33,6 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
                     $scope.searchFail = "false";
                 }
                 else {
-                    $scope.result = "No, sorry, your zip code does not recycle this RIC";
                     $scope.searchPass ="false";
                     $scope.searchFail="true";
                 }
