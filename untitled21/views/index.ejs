@@ -25,12 +25,34 @@
           </p>
       </div>
 
-      <div class="popupText" ng-mouseover="showPopup()" ng-mouseleave="hidePopup()">
-          What is a RIC code?
+      <!--<div class="popupText" ng-mouseover="showPopup()" ng-mouseleave="hidePopup()">-->
+          <!--What is a RIC code?-->
+      <!--</div>-->
+      <!--<div class="popup" ng-show="popupIsVisible">-->
+          <!--<img src="../public/images/ric_codes.jpg">-->
+      <!--</div>-->
+
+      <div class="ricInfo">
+          <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#RICModal">What is a RIC number?</button>
+          <div id="RICModal" class="modal fade" role="dialog">
+                <div class="modal-dialogue">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Look for the RIC number on your plastics, surrounded by recycle symbol</p>
+                            <img src="../public/images/ric_codes.jpg">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+          </div>
       </div>
-      <div class="popup" ng-show="popupIsVisible">
-          <img src="../public/images/ric_codes.jpg">
-      </div>
+
+        
 
       <!--<div class="buttons">-->
           <!--<button class="btn btn-default" ng-click="getInfo()">Can I Recycle??</button>-->
