@@ -22,7 +22,7 @@ var ResinSchema = new Schema({
 });
 
 var Recycling = mongoose.model('Recycling', ResinSchema);
-/*
+
 var recycle3 = new Recycling(
     {
         RecycleId: 3,
@@ -61,7 +61,6 @@ recycle3.save (function(err){
     console.log('Saved!');
 
 });
-*/
 
 module.exports = mongoose.model('Recycling',ResinSchema);
 

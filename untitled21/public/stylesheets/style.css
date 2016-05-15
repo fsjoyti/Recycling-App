@@ -24,7 +24,7 @@ a {
   background-color: #C4F3BD !important;
   opacity: 0.8;
   text-align: center;
-  height: 600px !important;
+  height: 750px !important;
   overflow-y: auto !important;
 }
 
@@ -54,6 +54,10 @@ a {
   width: auto;
   max-height: 300px;
   max-width: 300px;
+}
+
+.popupText {
+  font-size: 10px;
 }
 
 .content {

@@ -9,9 +9,8 @@ module.exports = function(app){
     var jsonObj = req.query;
     var RIC = jsonObj.number;
     var ZIP = jsonObj.location;
-
-
-
+      var number = parseInt(RIC);
+      var  zip = parseInt(ZIP);
 
 
 
