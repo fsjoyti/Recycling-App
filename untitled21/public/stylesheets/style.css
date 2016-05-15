@@ -16,19 +16,30 @@ a {
 }
 
 .jumbotron {
-  /*background-color: #FFF !important;*/
+  background-color: #C4F3BD !important;
   opacity: 0.8;
+  text-align: center;
+  height: 600px !important;
+  overflow: auto;
+}
+
+.selectResin, .buttons, .popupText, .recycle_info {
   text-align: center;
 }
 
-.selectResin, .buttons, .recycle_info {
-  text-align: center;
+.selectResin > p {
+  font-weight: bold;
 }
 
 .form-control {
   display: inline !important;
   width: 10% !important;
+  height: auto;
 }
 .popup {
     position: absolute;
+}
+
+.content {
+  margin-top: 50px;
 }
