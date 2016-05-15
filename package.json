@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/fsjoyti/Recycling-App#readme",
   "dependencies": {
+    "angular-modal-service": "^0.6.10",
     "serve-favicon": "^2.3.0"
   }
 }

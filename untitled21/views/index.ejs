@@ -11,8 +11,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
           integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
       <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
+      <script src="https://rawgit.com/dwmkerr/angular-modal-service/master/dst/angular-modal-service.js"></script>
+      <script src="../../javascripts/homeController.js"></script>
+
   </head>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 05139f4bd13e09564f3427f1e2cffb189d21adb1
   <body ng-controller="InfoCtrl">
 
     <div class="container">
@@ -21,7 +31,12 @@
           <p>Set the RIC code and zip code to find out if your plastic product is recyclable in your community!</p>
       </div>
 
+<<<<<<< HEAD
       <div class="content">
+=======
+    <div class="content">
+
+>>>>>>> 05139f4bd13e09564f3427f1e2cffb189d21adb1
           <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#RICModal">What is a RIC number?</button>
           <div id="RICModal" class="modal fade" role="dialog">
                 <div class="modal-dialogue">
@@ -31,7 +46,7 @@
                         </div>
                         <div class="modal-body">
                             <p>Look for the RIC number on your plastics, surrounded by recycle symbol</p>
-                            <img src="../public/images/ric_codes.jpg">
+                            <img class="resin-pic" src="../images/ric_codes.jpg">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -40,9 +55,25 @@
                 </div>
           </div>
 
+<<<<<<< HEAD
           <div class="popupText" ng-mouseover="showPopup()" ng-mouseleave="hidePopup()">
               What is an RIC code?
           </div>
+=======
+<<<<<<< HEAD
+      <!--<div class="popupText" ng-mouseover="showPopup()" ng-mouseleave="hidePopup()">-->
+          <!--What is an RIC code? TEST-->
+      <!--</div>-->
+      <!--<div class="popup" ng-show="popupIsVisible">-->
+          <!--An RIC code can be found on plastics within the universal recycling symbol-->
+         <!--<p> <img class="popup-image" src="../images/ric_codes.jpg"></p>-->
+      <!--</div>-->
+=======
+      <div class="popupText" ng-mouseover="showPopup()" ng-mouseleave="hidePopup()">
+          What is an RIC code?
+      </div>
+>>>>>>> 8de0e35abe39c60859262508a5a0363380f68660
+>>>>>>> 05139f4bd13e09564f3427f1e2cffb189d21adb1
 
           <div class="popup" ng-show="popupIsVisible">
               An RIC code can be found on plastics within the universal recycling symbol
@@ -77,11 +108,18 @@
       </div>
 
     </div>
+<<<<<<< HEAD
 
+=======
+    </div>
+    </div>
+<<<<<<< HEAD
+
+=======
+    </div>
+>>>>>>> 8de0e35abe39c60859262508a5a0363380f68660
+>>>>>>> 05139f4bd13e09564f3427f1e2cffb189d21adb1
   </body>
 
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
-  <script src="../../javascripts/homeController.js"></script>
+
 </html>
