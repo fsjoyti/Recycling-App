@@ -27,10 +27,10 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
             }).then(function successCallback(response) {
                 console.log(response);
                 if (response.data.length > 0) {
-                    $result = "Yes, you CAN recycle this in your zip code!";
+                    $scope.result = "Yes, you CAN recycle this in your zip code!";
                 }
                 else {
-                    $result = "No, sorry, your zip code does not recycle this RIC";
+                    $scope.result = "No, sorry, your zip code does not recycle this RIC";
                 }
             }, function errorCallback(response) {
                 console.log("Error!");
