@@ -33,14 +33,19 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
                         console.log(response.data.location[0]);
                         $scope.searchPass = "true";
                         $scope.searched = "true"
+                        $scope.invalidEntry="";
                     }
                     else {
                         $scope.searchPass = "";
                         $scope.searched = "true";
+                        $scope.invalidEntry="";
                     }
                 }, function errorCallback(response) {
                     console.log("Error!");
                 });
+            }
+            else {
+                $scope.invalidEntry="true";
             }
 
         };
