@@ -4,46 +4,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var LocationSchema = new Schema({
-    locationID:Number,
-    zipcode :  Number,
-    name:String,
-    city : String,
-    address : String
-    
-});
-var LocationModel = mongoose.model('Location', LocationSchema);
-
-
-// Saving it to the database.
-LocationModel.insert(
-    {
-        locationID:1,
-        zipcode :  Number,
-        name:String,
-        city : String,
-        address : String
-    }
-);
-LocationModel.insert(
-    {
-        locationID:Number,
-        zipcode :  Number,
-        name:String,
-        city : String,
-        address : String
-    }
-);
-LocationModel.insert(
-    {
-        locationID:Number,
-        zipcode :  Number,
-        name:String,
-        city : String,
-        address : String
-    }
-);
-module.exports = mongoose.model('Location',LocationSchema);
 
 
 var ResinSchema = new Schema({
@@ -51,7 +11,7 @@ var ResinSchema = new Schema({
     number :  Number,
     description:String,
     examples : {type:Array},
-    location :[{locationId:Number}]
+    location :{type:Array},
 
 
 
@@ -61,36 +21,27 @@ var ResinSchema = new Schema({
 
 });
 
-var RecyclingModel = mongoose.model('Recycling', ResinSchema);
-
-
-module.exports = mongoose.model('Recycling',ResinSchema);
-RecyclingModel.insert(
+var RecyclingModel = mongoose.model('Recycling', ResinSchema,'Recycle');
+var recycle = new RecyclingModel(
     {
-        RecycleId: Number,
-        number :  Number,
-        description:String,
-        examples : {type:Array},
-        locationIDs: [{locationID: 1}]
+        RecycleId: 1,
+        number :  1,
+        description:'ddwd',
+        examples : ['dwdwd'],
+        location: [{
+            locationID:1,
+            zipcode :  98230,
+            name:'Blabla',
+            city : 'Everett',
+            address : '12231 efdf'
+
+        }]
     }
 );
-RecyclingModel.insert(
-    {
-        RecycleId: Number,
-        number :  Number,
-        description:String,
-        examples : {type:Array},
-        locationIDs: [{locationID: 2}]
+recycle.save (function(err){
+    if (err) throw err;
+    console.log('Saved!');
 
-    }
-);
-RecyclingModel.insert(
-    {
-        RecycleId: Number,
-        number :  Number,
-        description:String,
-        examples : {type:Array},
-        locationIDs: [{locationID:3 }]
-    }
-);
+});
+//module.exports = mongoose.model('Recycling',ResinSchema);
 
