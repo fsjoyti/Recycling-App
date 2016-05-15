@@ -25,12 +25,12 @@
     <div class="container">
       <div class="jumbotron">
           <h1>Can I Recycle This?</h1>
-          <p class="description">Set the RIC code and zip code to find out if your plastic product is recyclable in your community!</p>
+          <p class="description">Enter the Resin Identification Code (RIC) of your plastic product and zip code to find out if it is recyclable in your community!</p>
       </div>
 
     <div class="content">
 
-          <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#RICModal">What is a RIC number?</button>
+          <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#RICModal">What is an RIC number?</button>
           <div id="RICModal" class="modal fade" role="dialog">
                 <div class="modal-dialogue">
                     <div class="modal-content">
@@ -66,7 +66,7 @@
           <!--</div>-->
 
           <div class ="selectResin">
-              <p>Select a resin number to get recycling information:
+              <p>Select an RIC to get recycling information:
                   <select ng-options="resin for resin in resins" ng-model="resin.number"></select>
               </p>
           </div>
@@ -74,17 +74,17 @@
           <div class="recycle_info">
 
               <div class="selectZIP">
-                  <p>Input a ZIP code to find out if this resin # is recyclable in your county</p>
+                  <p>Input a ZIP code to find out if this RIC is recyclable in your county</p>
                   <input class="form-control" ng-model="resin.location" placeholder="ZIP">
               </div>
               <div class="buttons">
-                  <button class="btn btn-default" ng-click="getInfo()">Can I Recycle Resin # {{resin.ID}}??</button>
+                  <button class="btn btn-default" ng-click="getInfo()">Can I Recycle RIC {{resin.ID}}?</button>
               </div>
               <div class="results" ng-show="searched">
                   <div class="pass" ng-show="searchPass"><p>"Yes, you CAN recycle this in your zip code!</p><p>{{centerAddress.address}}</p><p>{{centerAddress.city}}, WA {{centerAddress.zipcode}}</p>
                   </div>
                   <div class="fail" ng-hide="searchPass">
-                      <p>No, sorry, your zip code does not recycle this RIC</p>
+                      <p>Sorry, your zip code does not recycle this RIC</p>
                   </div>
               </div>
 
