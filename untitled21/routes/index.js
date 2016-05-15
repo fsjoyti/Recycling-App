@@ -5,16 +5,15 @@ module.exports = function(app){
 
   });
   app.get('/recycling',function(req,res){
-    console.log(req.query);
+   
     var jsonObj = req.query;
     var RIC = jsonObj.number;
     var ZIP = jsonObj.location;
-    console.log(RIC);
-    console.log(ZIP);
+
     var number = parseInt(RIC);
     var zip = parseInt(ZIP);
 
-   
+
 
     Recycle.find({'number':number,'location.zipcode':zip},function(error,recycle){
 
