@@ -1,6 +1,7 @@
-var express = require('express');
+var app = require('express')();
+var http = require('http').Server(app);
 var path = require('path');
-var favicon = require('serve-favicon');
+//var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -9,8 +10,8 @@ var routes = require('./routes/index');
 //var users = require('./routes/users');
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017');
-var app = express();
+//mongoose.connect('mongodb://localhost:27017');
+
 var users = require('./routes/users');
 
 // view engine setup
@@ -23,6 +24,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+<<<<<<< HEAD
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
@@ -59,5 +61,16 @@ app.use(function(err, req, res, next) {
   });
 });
 
+http.listen(3000, function () {
+  console.log(hi)
+});
 
 module.exports = app;
+=======
+
+
+
+http.listen(3001,function () {
+  console.log("Example app listening at http://localhost:3001");
+});
+>>>>>>> e425c18c9d5b3b5568cb42457f4837578a34997e
