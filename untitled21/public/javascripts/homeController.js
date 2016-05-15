@@ -33,7 +33,7 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
                     $scope.searched="true"
                 }
                 else {
-                    $scope.searchPass="false";
+                    $scope.searchPass="";
                     $scope.searched="true";
                 }
             }, function errorCallback(response) {
