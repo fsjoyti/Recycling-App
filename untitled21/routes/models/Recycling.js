@@ -9,13 +9,7 @@ var LocationSchema = new Schema({
     name:String,
     city : String,
     address : String
-
-
-
-
-
-
-
+    
 });
 var LocationModel = mongoose.model('Location', LocationSchema);
 module.exports = mongoose.model('Location',LocationSchema);
