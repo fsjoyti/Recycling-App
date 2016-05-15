@@ -6,7 +6,7 @@ var recycleApp = angular.module('recycleApp', []);
 recycleApp.controller('InfoCtrl', ['$scope', '$http',
     function($scope, $http){
 
-        $scope.getInfo() = function(){
+        var getInfo = function(){
             console.log($scope.resin);
         }
 
