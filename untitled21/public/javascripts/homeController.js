@@ -41,7 +41,6 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
 
         $scope.showPopup = function() {
             $scope.popupIsVisible = true;
-            $scope.textIsHidden = true;
             console.log($scope.popupIsVisible);
         };
 
