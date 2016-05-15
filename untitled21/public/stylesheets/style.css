@@ -2,9 +2,10 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     background-image: url("../images/recycling-logo.png");
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center !important;
-    background-size: 70%;
+    /*background-size: 70%;*/
 }
 
 .selectResin, .form-control, .selectZIP {
@@ -32,9 +33,10 @@ a {
 }
 
 .form-control {
-  display: inline !important;
-  width: 10% !important;
+  width: 100px !important;
+  max-width: 100px !important;
   height: auto;
+  display: inline-block !important;
 }
 
 .popup {
