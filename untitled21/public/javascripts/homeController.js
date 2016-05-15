@@ -30,7 +30,7 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
                     $scope.centerAddress = response.data.location[0];
                     console.log(response.data.location[0]);
                     $scope.result = "Yes, you CAN recycle this in your zip code!";
-                    searched="true";
+                    $scope.searched="true";
                 }
                 else {
                     $scope.result = "No, sorry, your zip code does not recycle this RIC";
