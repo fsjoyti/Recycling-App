@@ -12,7 +12,11 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
 
         $scope.getInfo = function(){
             console.log($scope.resin);
-            //$http.get()
+         /*   $http.get('/resin').success(function(response){
+                console.log("I got the data I requested");
+                $scope.resin = response;
+                console.log(response);
+            });*/
         };
 
     }]);
