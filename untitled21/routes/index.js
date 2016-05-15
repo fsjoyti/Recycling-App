@@ -19,8 +19,8 @@ module.exports = function(app){
 
       if (error)res.send(error);
       else {
-        console.log(recycle);
-        res.json(recycle);
+        
+        res.json(recycle[0].location);
       }
     });
 
