@@ -5,6 +5,12 @@ module.exports = function(app){
 
   });
   app.get('/recycling',function(req,res){
+    console.log(req.query);
+    var jsonObj = req.query;
+    var RIC = jsonObj.number;
+    var ZIP = jsonObj.location;
+    console.log(RIC);
+    console.log(ZIP);
 
     Recycle.find({'number':1},function(error,recycle){
 
