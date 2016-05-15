@@ -29,3 +29,6 @@ a {
   display: inline !important;
   width: 10% !important;
 }
+.popup {
+    position: absolute;
+}

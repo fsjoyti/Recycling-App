@@ -4,65 +4,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var LocationSchema = new Schema({
-    locationID:Number,
-    zipcode :  Number,
-    name:String,
-    city : String,
-    address : String
-    
-});
-var LocationModel = mongoose.model('Location', LocationSchema);
-
-
-// Saving it to the database.
-
-
-
-var jsonObject = new LocationModel(
-{
-    locationID: 1,
-    zipcode: 98109,
-    name: "Recyclebike",
-    city: "Seattle",
-    address: "520 pike st."
-});
-
-jsonObject.save(function(err) {
-    if (err)
-        throw err;
-});
-
-
-
-// LocationModel.insert(
-//     {
-//         locationID:1,
-//         zipcode :  Number,
-//         name:String,
-//         city : String,
-//         address : String
-//     }
-// );
-// LocationModel.insert(
-//     {
-//         locationID:Number,
-//         zipcode :  Number,
-//         name:String,
-//         city : String,
-//         address : String
-//     }
-// );
-// LocationModel.insert(
-//     {
-//         locationID: 3,
-//         zipcode :  98109,
-//         name:String,
-//         city : String,
-//         address : String
-//     }
-// );
-module.exports = mongoose.model('Location',LocationSchema);
 
 
 var ResinSchema = new Schema({
@@ -70,56 +11,55 @@ var ResinSchema = new Schema({
     number :  Number,
     description:String,
     examples : {type:Array},
-    location :[{locationId:Number}]
+    location :{type:Array}
+
+
+
+
+
+
 
 });
 
-var RecyclingModel = mongoose.model('Recycling', ResinSchema);
+var Recycling = mongoose.model('Recycling', ResinSchema);
+var recycle3 = new Recycling(
+    {
+        RecycleId: 3,
+        number :  1,
+        description:'ddwd',
+        examples : ['dwdwd'],
+        location: [{
+            locationID:1,
+            zipcode :  98210,
+            name:'Blablawfef',
+            city : 'Seattle',
+            address : 'dddfd ave ne'
 
+        },
+            {
+                locationID:2,
+                zipcode :  98210,
+                name:'fefef',
+                city : 'Seattle',
+                address : 'fefefefe'
 
-module.exports = mongoose.model('Recycling',ResinSchema);
+            },
+            {
+                locationID:3,
+                zipcode :  98210,
+                name:'fefef',
+                city : 'Seattle',
+                address : 'fefefefe'
 
-var ksonObject = new RecyclingModel(
-{
-        RecycleId: 1,
-        number :  6,
-        description: "description",
-        examples : ["plastic bottles", "cans"],
-        locationIDs: [{locationID: 1}]
+            }
+        ]
+    }
+);
+recycle3.save (function(err){
+    if (err) console.log("Error on save!");
+    console.log('Saved!');
+
 });
 
-ksonObject.save(function(err) {
-    if (err)
-        throw err;
-});
-
-
-// RecyclingModel.insert(
-//     {
-//         RecycleId: Number,
-//         number :  Number,
-//         description:String,
-//         examples : {type:Array},
-//         locationIDs: [{locationID: 1}]
-//     }
-// );
-// RecyclingModel.insert(
-//     {
-//         RecycleId: Number,
-//         number :  Number,
-//         description:String,
-//         examples : {type:Array},
-//         locationIDs: [{locationID: 2}]
-//
-//     }
-// );
-// RecyclingModel.insert(
-//     {
-//         RecycleId: Number,
-//         number :  Number,
-//         description:String,
-//         examples : {type:Array},
-//         locationIDs: [{locationID:3 }]
-//     }
-// );
+//module.exports = mongoose.model('Recycling',ResinSchema);
 
