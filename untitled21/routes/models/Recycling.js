@@ -18,26 +18,29 @@ var LocationModel = mongoose.model('Location', LocationSchema);
 // Saving it to the database.
 LocationModel.insert(
     {
-        ingredient: "Chicken Breast",
-        ingredientID: 1,
-        quantity: 2,
-        caloriecount: 100
+        locationID:1,
+        zipcode :  Number,
+        name:String,
+        city : String,
+        address : String
     }
 );
-ingredientsCollection.insert(
+LocationModel.insert(
     {
-        ingredient: "Olive Oil",
-        ingredientID: 2,
-        quantity: 1,
-        caloriecount: 100
+        locationID:Number,
+        zipcode :  Number,
+        name:String,
+        city : String,
+        address : String
     }
 );
-ingredientsCollection.insert(
+LocationModel.insert(
     {
-        ingredient: "Broccoli",
-        ingredientID: 3,
-        quantity: 2,
-        caloriecount: 20
+        locationID:Number,
+        zipcode :  Number,
+        name:String,
+        city : String,
+        address : String
     }
 );
 module.exports = mongoose.model('Location',LocationSchema);
@@ -60,5 +63,33 @@ var ResinSchema = new Schema({
 
 var RecyclingModel = mongoose.model('Recycling', ResinSchema);
 
+
 module.exports = mongoose.model('Recycling',ResinSchema);
+RecyclingModel.insert(
+    {
+        recipeID: 1,
+        recipeName: 'Chicken',
+        categoryID: 1,
+        recipeInstructions: 'Boil chicken',
+        ingredientIDs: [{ingredientID: 1}]
+    }
+);
+RecyclingModel.insert(
+    {
+        recipeID: 2,
+        recipeName: 'Ferret treat',
+        categoryID: 3,
+        recipeInstructions: 'Put olive oil on ferret bellies',
+        ingredientIDs: [{ingredientID: 2}]
+    }
+);
+RecyclingModel.insert(
+    {
+        recipeID: 3,
+        recipeName: 'Broccoli Snack',
+        categoryID: 2,
+        recipeInstructions: 'Boil broccoli until mostly cooked, then saute in olive oil for 5-10 minutes',
+        ingredientIDs: [{ingredientID: 2}, {ingredientID: 3}]
+    }
+);
 
