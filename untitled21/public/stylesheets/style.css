@@ -7,6 +7,10 @@ body {
     background-size: 70%;
 }
 
+.selectResin, .form-control, .selectZIP {
+  margin: 10px;
+}
+
 a {
   color: #00B7FF;
 }
@@ -15,4 +19,16 @@ a {
   /*background-color: #FFF !important;*/
   opacity: 0.8;
   text-align: center;
+}
+
+.selectResin, .buttons, .recycle_info {
+  text-align: center;
+}
+
+.form-control {
+  display: inline !important;
+  width: 10% !important;
+}
+.popup {
+    position: absolute;
 }
