@@ -3,37 +3,30 @@
   <head>
     <title>Recycle</title>
 
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='public/stylesheets/style.css' />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
           integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   </head>
   <body ng-controller="EntryCtrl">
-    <div class="entry_info" >
         <h1>Can I Recycle This?</h1>
-        <table>
-            <tbody>
-                <tr>
-                    Choose a RESIN number to receive recycling information:
-                </tr>
-                <tr>
-                    <select ng-model="resin">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                    </select>
-                </tr>
-                <tr>
-                    <button class="btn btn-default" ng-click="getInfo()">Can I Recycle??</button>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        <div class ="selectResin">
+            <p>Select a resin number to get recycling information:
+            <select ng-model="resin">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+            </select>
+            </p>
+        </div>
+        <div class="buttons">
+            <button class="btn btn-default" ng-click="getInfo()">Can I Recycle??</button>
+        </div>
 
     <div class="recycle_info">
 
@@ -42,6 +35,6 @@
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/-route.js"></script>
-  <script src="untitled21/controllers/controller.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
+  <script src="controllers/homeController.js"></script>
 </html>
