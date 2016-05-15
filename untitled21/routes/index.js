@@ -20,7 +20,7 @@ module.exports = function(app){
       if (error)res.send(error);
       else {
         
-        res.json(recycle[0].location);
+        res.json(recycle[0].location.find(zip));
       }
     });
 
