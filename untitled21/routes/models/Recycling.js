@@ -11,7 +11,7 @@ var ResinSchema = new Schema({
     number :  Number,
     description:String,
     examples : {type:Array},
-    location :{type:Array},
+    location :{type:Array}
 
 
 
@@ -21,27 +21,45 @@ var ResinSchema = new Schema({
 
 });
 
-var RecyclingModel = mongoose.model('Recycling', ResinSchema,'Recycle');
-var recycle = new RecyclingModel(
+var Recycling = mongoose.model('Recycling', ResinSchema);
+var recycle3 = new Recycling(
     {
-        RecycleId: 1,
+        RecycleId: 3,
         number :  1,
         description:'ddwd',
         examples : ['dwdwd'],
         location: [{
             locationID:1,
-            zipcode :  98230,
-            name:'Blabla',
-            city : 'Everett',
-            address : '12231 efdf'
+            zipcode :  98210,
+            name:'Blablawfef',
+            city : 'Seattle',
+            address : 'dddfd ave ne'
 
-        }]
+        },
+            {
+                locationID:2,
+                zipcode :  98210,
+                name:'fefef',
+                city : 'Seattle',
+                address : 'fefefefe'
+
+            },
+            {
+                locationID:3,
+                zipcode :  98210,
+                name:'fefef',
+                city : 'Seattle',
+                address : 'fefefefe'
+
+            }
+        ]
     }
 );
-recycle.save (function(err){
-    if (err) throw err;
+recycle3.save (function(err){
+    if (err) console.log("Error on save!");
     console.log('Saved!');
 
 });
+
 //module.exports = mongoose.model('Recycling',ResinSchema);
 
