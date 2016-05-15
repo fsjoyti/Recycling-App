@@ -11,6 +11,7 @@
           integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   </head>
   <body ng-controller="InfoCtrl">
+<<<<<<< HEAD
   <div class="container">
       <div class="jumbotron">
           <h1>Can I Recycle This?</h1>
@@ -27,6 +28,29 @@
       </div>
 
     <div class="recycle_info">
+=======
+        <h1>Can I Recycle This?</h1>
+        <div class ="selectResin">
+            <p>Select a resin number to get recycling information:
+            <select ng-options="resin for resin in resins" ng-model="resin.ID">
+                <option value="" disabled selected>Resin</option>
+            </select>
+            </p>
+        </div>
+
+        <div class="selectZIP">
+            <p>Input a ZIP code to find out if this resin # is recyclable in your county</p>
+            <input class="form-control" ng-model="resin.location" placeholder="ZIP">
+        </div>
+
+        <div class="buttons">
+            <button class="btn btn-default" ng-click="getInfo()">Can I Recycle Resin # {{resin.ID}}??</button>
+        </div>
+
+    <div class="recycle_info">
+
+    </div>
+>>>>>>> 844f4dd81c6ba82b61ede3389fff62cd82a27fba
 
     </div>
   </div>
