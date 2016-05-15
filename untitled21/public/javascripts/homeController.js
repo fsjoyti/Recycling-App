@@ -32,13 +32,15 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
                         $scope.centerAddress = response.data.location[0];
                         console.log(response.data.location[0]);
                         $scope.searchPass = "true";
-                        $scope.searched = "true"
+                        $scope.searched = "true";
                         $scope.invalidEntry="";
+                        $scope.searchFail="";
                     }
                     else {
                         $scope.searchPass = "";
                         $scope.searched = "true";
                         $scope.invalidEntry="";
+                        $scope.searchFail="true"
                     }
                 }, function errorCallback(response) {
                     console.log("Error!");
@@ -46,6 +48,9 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
             }
             else {
                 $scope.invalidEntry="true";
+                $scope.searched="true";
+                $scope.searchPass="";
+                $scope.searchFail="";
             }
 
         };
