@@ -24,15 +24,6 @@ module.exports = function(app){
       }
     });
 
-    /*
-      Recycle.find({number:number}).exec(function(err, recycle){
-
-
-            res.json(recycle);
-      });
-
-*/
-
 
     });
 

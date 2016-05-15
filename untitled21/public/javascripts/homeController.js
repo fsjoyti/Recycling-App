@@ -26,13 +26,14 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
                 params: $scope.data
             }).then(function successCallback(response) {
                 console.log(response);
-               $result = response;
-                // this callback will be called asynchronously
-                // when the response is available
+                if (response.data > 0) {
+                    $result = "Yes, you CAN recycle this in your zip code!";
+                }
+                else {
+                    $result = "No, sorry, your zip code does not recycle this RIC";
+                }
             }, function errorCallback(response) {
                 console.log("Error!");
-                // called asynchronously if an error occurs
-                // or server returns response with an error status.
             });
             
 
