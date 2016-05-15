@@ -6,6 +6,7 @@ module.exports = function(app){
   });
   app.get('/recycling',function(req,res){
 
+    console.log(req.body);
     Recycle.find({'number':1},function(error,recycle){
 
       if(error)res.send(error);

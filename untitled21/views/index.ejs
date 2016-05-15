@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <link href="../public/stylesheets/style.css" rel="stylesheet" />
+      <link href="../../stylesheets/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
@@ -17,9 +17,9 @@
       <div class="jumbotron">
           <h1>Can I Recycle This?</h1>
           <p>Set the RIC code and zip code to find out if your plastic product is recyclable in your community!</p>
-      </div>
 
-        
+
+    <div class="content">
       <div class ="selectResin">
           <p>Select a resin number to get recycling information:
               <select ng-options="resin for resin in resins" ng-model="resin.number"></select>
@@ -27,36 +27,31 @@
       </div>
 
 
-      <div class="ricInfo">
-          <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#RICModal">What is a RIC number?</button>
-          <div id="RICModal" class="modal fade" role="dialog">
-                <div class="modal-dialogue">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Look for the RIC number on your plastics, surrounded by recycle symbol</p>
-                            <img src="../public/images/ric_codes.jpg">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-          </div>
-      <div class="popupText" ng-mouseover="showPopup()" ng-mouseleave="hidePopup()">
+
+          <!--<button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#RICModal">What is a RIC number?</button>-->
+          <!--<div id="RICModal" class="modal fade" role="dialog">-->
+                <!--<div class="modal-dialogue">-->
+                    <!--<div class="modal-content">-->
+                        <!--<div class="modal-header">-->
+                            <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+                        <!--</div>-->
+                        <!--<div class="modal-body">-->
+                            <!--<p>Look for the RIC number on your plastics, surrounded by recycle symbol</p>-->
+                            <!--<img src="../public/images/ric_codes.jpg">-->
+                        <!--</div>-->
+                        <!--<div class="modal-footer">-->
+                            <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+          <!--</div>-->
+
+      <div class="popupText" ng-mouseover="showPopup()" ng-mouseleave="hidePopup()" ng-hide="textIsHidden">
           What is a RIC code?
       </div>
       <div class="popup" ng-show="popupIsVisible">
-          <img src="../public/images/ric_codes.jpg">
+          <img class="popup-image" src="../images/ric_codes.jpg">
       </div>
-
-        
-
-      <!--<div class="buttons">-->
-          <!--<button class="btn btn-default" ng-click="getInfo()">Can I Recycle??</button>-->
-      <!--</div>-->
 
       <div class="recycle_info">
 
@@ -68,12 +63,14 @@
         <div class="buttons">
             <button class="btn btn-default" ng-click="getInfo()">Can I Recycle Resin # {{resin.ID}}??</button>
         </div>
-
       </div>
+    </div>
+    </div>
     </div>
   </body>
 
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
-  <script src="../public/javascripts/homeController.js"></script>
+  <script src="../../javascripts/homeController.js"></script>
 </html>

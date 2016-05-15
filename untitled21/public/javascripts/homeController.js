@@ -21,11 +21,13 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
 
         $scope.showPopup = function() {
             $scope.popupIsVisible = true;
+            $scop.textIsHidden = true;
             console.log($scope.popupIsVisible);
         };
 
         $scope.hidePopup = function () {
             $scope.popupIsVisible = false;
+            $scope.textIsHidden = false;
             console.log($scope.popupIsVisible);
         };
 
