@@ -27,10 +27,10 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
             }).then(function successCallback(response) {
                 console.log(response)
                 var arr = response.data;
+                console.log(arr);
                 if (arr.length > 0) {
+                    console.log(arr);
                     $scope.result = "Yes, you CAN recycle this in your zip code!";
-                    $scope.info = arr.find(zip);
-                    console.log($scope.info);
                 }
                 else {
                     $scope.result = "No, sorry, your zip code does not recycle this RIC";

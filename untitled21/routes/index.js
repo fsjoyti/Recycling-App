@@ -14,15 +14,15 @@ module.exports = function(app){
 
 
 
-    Recycle.find({'number':number,'location.zipcode':zip},function(error,recycle) {
+    Recycle.findOne({'number':number,'location.zipcode':zip},{'location.$': 1},function(error,recycle) {
 
 
       if (error)res.send(error);
       else {
-        
-        res.json(recycle[0].location);
+        console.log(recycle);
+        res.json(recycle);
       }
-    });
+    }).limit(1);
 
 
     });
