@@ -97,5 +97,12 @@ a {
   .jumbotron p {
     font-size: 1.5em !important;
   }
-
+  .modal {
+    width: 320px;
+    overflow-y: scroll;
+    font-size: 1.5em;
+  }
+  .resin-pic {
+    width: 300px;
+  }
 }
