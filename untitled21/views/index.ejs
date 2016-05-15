@@ -4,7 +4,8 @@
     <title>Recycle</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel='stylesheet' href='../public/stylesheets/style.css' />
+
+      <link href="../../stylesheets/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
@@ -16,38 +17,36 @@
       <div class="jumbotron">
           <h1>Can I Recycle This?</h1>
           <p>Set the RIC code and zip code to find out if your plastic product is recyclable in your community!</p>
+      </div>
 
-          <div class="content">
-              <div class ="selectResin">
-                  <p>Select a resin number to get recycling information:
-                      <select ng-options="resin for resin in resins" ng-model="resin.ID"></select>
-                  </p>
-              </div>
+        
+      <div class ="selectResin">
+          <p>Select a resin number to get recycling information:
+              <select ng-options="resin for resin in resins" ng-model="resin.number"></select>
+          </p>
+      </div>
 
-              <div class="popupText" ng-mouseover="showPopup()" ng-mouseleave="hidePopup()">
-                  What is a RIC code?
-              </div>
-              <div class="popup" ng-show="popupIsVisible">
-                  <img class="popup-image" src="../public/images/ric_codes.jpg">
-              </div>
+      <div class="popupText" ng-mouseover="showPopup()" ng-mouseleave="hidePopup()">
+          What is a RIC code?
+      </div>
+      <div class="popup" ng-show="popupIsVisible">
+          <img src="../images/ric_codes.jpg">
+      </div>
 
-              <!--<div class="buttons">-->
-                  <!--<button class="btn btn-default" ng-click="getInfo()">Can I Recycle??</button>-->
-              <!--</div>-->
+      <!--<div class="buttons">-->
+          <!--<button class="btn btn-default" ng-click="getInfo()">Can I Recycle??</button>-->
+      <!--</div>-->
 
-              <div class="recycle_info">
+      <div class="recycle_info">
 
-                <div class="selectZIP">
-                    <p>Input a ZIP code to find out if this resin # is recyclable in your county</p>
-                    <input class="form-control" ng-model="resin.location" placeholder="ZIP">
-                </div>
+        <div class="selectZIP">
+            <p>Input a ZIP code to find out if this resin # is recyclable in your county</p>
+            <input class="form-control" ng-model="resin.location" placeholder="ZIP">
+        </div>
 
-                <div class="buttons">
-                    <button class="btn btn-default" ng-click="getInfo()">Can I Recycle Resin # {{resin.ID}}??</button>
-                </div>
-
-              </div>
-          </div>
+        <div class="buttons">
+            <button class="btn btn-default" ng-click="getInfo()">Can I Recycle Resin # {{resin.ID}}??</button>
+        </div>
 
       </div>
     </div>
@@ -55,5 +54,5 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
-  <script src="controllers/homeController.js"></script>
+  <script src="../../javascripts/homeController.js"></script>
 </html>
