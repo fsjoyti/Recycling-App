@@ -16,6 +16,7 @@ a {
 .content {
   /*background-color: #C4F3BD !important;*/
   background: rgba(196, 243, 189, .7);
+  margin-top: 0;
 }
 
 .jumbotron {
@@ -26,8 +27,11 @@ a {
   background-color: #C4F3BD !important;
   opacity: 0.8;
   text-align: center;
-  height: 550px !important;
+  padding-top: 70px;
+  height: 350px !important;
   overflow-y: auto !important;
+  margin-bottom: 0 !important;
+  border-radius: none;
 }
 
 .selectResin, .buttons, .popupText, .recycle_info {
@@ -66,11 +70,20 @@ a {
 }
 
 .content {
-  margin-top: 50px;
+  margin-top: 0px !important;
+  padding-top: 30px;
+  padding-bottom: 30px;
   text-align: center;
+
 }
 
-.resin-pic {
-  height: 450px;
-  weight: 450px;
+.modal {
+  height: auto;
+  max-width: 500px;
+  margin: auto;
 }
+.resin-pic {
+  height: 300px;
+  width: 450px;
+}
+
