@@ -27,12 +27,13 @@ a {
   background-color: #C4F3BD !important;
   opacity: 0.8;
   text-align: center;
-  padding-top: 70px;
   height: 350px !important;
   overflow-y: auto !important;
+  padding-top: 110px !important;
   margin-bottom: 0 !important;
-  border-radius: none;
+  border-radius: 0 !important;
 }
+
 
 .selectResin, .buttons, .popupText, .recycle_info {
   text-align: center;
@@ -71,10 +72,10 @@ a {
 
 .content {
   margin-top: 0px !important;
-  padding-top: 30px;
+  padding-top: 10px;
   padding-bottom: 30px;
   text-align: center;
-
+  background-color: rgba(196,243,189,0.8);
 }
 
 .modal {
