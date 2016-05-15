@@ -15,6 +15,7 @@ var ResinSchema = new Schema({
 });
 
 var Recycling = mongoose.model('Recycling', ResinSchema);
+/*
 
 
 
@@ -56,6 +57,8 @@ recycle3.save (function(err){
     console.log('Saved!');
 
 });
+*/
+
 
 module.exports = mongoose.model('Recycling',ResinSchema);
 

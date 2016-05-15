@@ -14,24 +14,27 @@ module.exports = function(app){
 
 
 
-    // Recycle.find({'number':number,'location.zipcode':zip},function(error,recycle){
-    //
-    //
-    //   if(error)res.send(error);
-    //   else {
-    //     console.log(recycle);
-    //     res.json(recycle);
-    //   }
+    Recycle.find({'number':number,'location.zipcode':zip},function(error,recycle) {
 
-      Recycle.find({'number':number}).where('location').in([zip]).exec(function(err, recycle){
-            console.log(recycle);
+
+      if (error)res.send(error);
+      else {
+        console.log(recycle);
+        res.json(recycle);
+      }
+    });
+
+    /*
+      Recycle.find({number:number}).exec(function(err, recycle){
+
+
             res.json(recycle);
       });
 
-
+*/
 
 
     });
 
-  });
+  
 }
