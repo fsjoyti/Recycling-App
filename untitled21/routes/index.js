@@ -11,13 +11,27 @@ module.exports = function(app){
     var ZIP = jsonObj.location;
     console.log(RIC);
     console.log(ZIP);
+    var number = parseInt(RIC);
+    var zip = parseInt(ZIP);
 
-    Recycle.find({'number':1},function(error,recycle){
+    /*
+    Recycle.find({number:RIC,location: {$elemMatch: {zipcode:ZIP}}},function(error,recycle){
 
       if(error)res.send(error);
       else {
+        console.log(recycle);
         res.json(recycle);
       }
+      */
+
+    Recycle.find({'number':number,'location.zipcode':zip},function(error,recycle){
+
+      if(error)res.send(error);
+      else {
+        console.log(recycle);
+        res.json(recycle);
+      }
+
 
 
 
