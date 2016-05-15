@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/fsjoyti/Recycling-App/issues"
   },
-  "homepage": "https://github.com/fsjoyti/Recycling-App#readme"
+  "homepage": "https://github.com/fsjoyti/Recycling-App#readme",
+  "dependencies": {
+    "serve-favicon": "^2.3.0"
+  }
 }

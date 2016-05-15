@@ -2,9 +2,10 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     background-image: url("../images/recycling-logo.png");
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center !important;
-    background-size: 70%;
+    /*background-size: 70%;*/
 }
 
 .selectResin, .form-control, .selectZIP {
@@ -16,19 +17,39 @@ a {
 }
 
 .jumbotron {
-  /*background-color: #FFF !important;*/
+  background-color: #C4F3BD !important;
   opacity: 0.8;
+  text-align: center;
+  height: 600px !important;
+  overflow: auto;
+}
+
+.selectResin, .buttons, .popupText, .recycle_info {
   text-align: center;
 }
 
-.selectResin, .buttons, .recycle_info {
-  text-align: center;
+.selectResin > p {
+  font-weight: bold;
 }
 
 .form-control {
-  display: inline !important;
-  width: 10% !important;
+  width: 100px !important;
+  max-width: 100px !important;
+  height: auto;
+  display: inline-block !important;
 }
+
 .popup {
     position: absolute;
+}
+
+.popup-image {
+  height: auto;
+  width: auto;
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.content {
+  margin-top: 50px;
 }
