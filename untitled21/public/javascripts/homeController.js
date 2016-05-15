@@ -14,32 +14,34 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
             console.log($scope.resin);
             var number = $scope.resin.number;
             var location = $scope.resin.location;
-            console.log(number);
-            console.log(location);
-            $scope.data= {number:number,location:location}
-            console.log($scope.data);
+            if (location.length=5 && string.match(/^[0-9]+$/) != null)
+            {
+                console.log(number);
+                console.log(location);
+                $scope.data = {number: number, location: location}
+                console.log($scope.data);
 
-            
-            $http({
-                url: '/recycling' ,
-                method: 'GET',
-                params: $scope.data
-            }).then(function successCallback(response) {
-                console.log(response);
-                if (response.data != null) {
-                    $scope.centerAddress = response.data.location[0];
-                    console.log(response.data.location[0]);
-                    $scope.searchPass="true";
-                    $scope.searched="true"
-                }
-                else {
-                    $scope.searchPass="";
-                    $scope.searched="true";
-                }
-            }, function errorCallback(response) {
-                console.log("Error!");
-            });
-            
+
+                $http({
+                    url: '/recycling',
+                    method: 'GET',
+                    params: $scope.data
+                }).then(function successCallback(response) {
+                    console.log(response);
+                    if (response.data != null) {
+                        $scope.centerAddress = response.data.location[0];
+                        console.log(response.data.location[0]);
+                        $scope.searchPass = "true";
+                        $scope.searched = "true"
+                    }
+                    else {
+                        $scope.searchPass = "";
+                        $scope.searched = "true";
+                    }
+                }, function errorCallback(response) {
+                    console.log("Error!");
+                });
+            }
 
         };
 
