@@ -48,6 +48,7 @@
                 </div>
           </div>
 
+<<<<<<< HEAD
       <!--<div class="popupText" ng-mouseover="showPopup()" ng-mouseleave="hidePopup()">-->
           <!--What is an RIC code? TEST-->
       <!--</div>-->
@@ -55,23 +56,33 @@
           <!--An RIC code can be found on plastics within the universal recycling symbol-->
          <!--<p> <img class="popup-image" src="../images/ric_codes.jpg"></p>-->
       <!--</div>-->
+=======
+      <div class="popupText" ng-mouseover="showPopup()" ng-mouseleave="hidePopup()">
+          What is an RIC code?
+      </div>
+>>>>>>> 8de0e35abe39c60859262508a5a0363380f68660
 
-        <div class ="selectResin">
-            <p>Select a resin number to get recycling information:
-                <select ng-options="resin for resin in resins" ng-model="resin.number"></select>
-            </p>
-        </div>
+          <div class="popup" ng-show="popupIsVisible">
+              An RIC code can be found on plastics within the universal recycling symbol
+             <p> <img class="popup-image" src="../images/ric_codes.jpg"></p>
+          </div>
 
-      <div class="recycle_info">
+          <div class ="selectResin">
+              <p>Select a resin number to get recycling information:
+                  <select ng-options="resin for resin in resins" ng-model="resin.number"></select>
+              </p>
+          </div>
 
-        <div class="selectZIP">
-            <p>Input a ZIP code to find out if this resin # is recyclable in your county</p>
-            <input class="form-control" ng-model="resin.location" placeholder="ZIP">
-        </div>
+          <div class="recycle_info">
 
-        <div class="buttons">
-            <button class="btn btn-default" ng-click="getInfo()">Can I Recycle Resin # {{resin.ID}}??</button>
-        </div>
+          <div class="selectZIP">
+              <p>Input a ZIP code to find out if this resin # is recyclable in your county</p>
+              <input class="form-control" ng-model="resin.location" placeholder="ZIP">
+          </div>
+
+          <div class="buttons">
+              <button class="btn btn-default" ng-click="getInfo()">Can I Recycle Resin # {{resin.ID}}??</button>
+          </div>
 
           <div class="results" ng-show="searched">
               <div class="pass" ng-show="searchPass">
@@ -86,7 +97,11 @@
     </div>
     </div>
     </div>
+<<<<<<< HEAD
 
+=======
+    </div>
+>>>>>>> 8de0e35abe39c60859262508a5a0363380f68660
   </body>
 
 

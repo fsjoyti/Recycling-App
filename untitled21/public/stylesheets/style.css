@@ -14,11 +14,12 @@ a {
 }
 
 .content {
-  background-color: #C4F3BD !important;
+  /*background-color: #C4F3BD !important;*/
+  background: rgba(196, 243, 189, .7);
 }
 
 .jumbotron {
-  background-image: url("../images/recycling-logo.png");
+  background-image: url("../images/recycling-logo-40transparency.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center !important;
