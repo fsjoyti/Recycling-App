@@ -64,10 +64,10 @@
             <button class="btn btn-default" ng-click="getInfo()">Can I Recycle Resin # {{resin.ID}}??</button>
         </div>
 
-          <div class="results">
+          <div class="results" ng-show="searched">
             <p>{{result}}</p>
               <p>{{centerAddress.address}}</p>
-              <p>{{centerAddress.city}}, WA {{centerAddress.zip}}</p>
+              <p>{{centerAddress.city}}, WA {{centerAddress.zipcode}}</p>
           </div>
       </div>
     </div>
