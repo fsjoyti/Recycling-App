@@ -25,7 +25,7 @@ a {
   background-color: #C4F3BD !important;
   opacity: 0.8;
   text-align: center;
-  height: 750px !important;
+  height: 550px !important;
   overflow-y: auto !important;
 }
 
@@ -66,4 +66,10 @@ a {
 
 .content {
   margin-top: 50px;
+  text-align: center;
+}
+
+.resin-pic {
+  height: 450px;
+  weight: 450px;
 }
