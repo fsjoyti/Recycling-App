@@ -14,7 +14,7 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
             console.log($scope.resin);
             var number = $scope.resin.number;
             var location = $scope.resin.location;
-            if (location.length=5 && string.match(/^[0-9]+$/) != null)
+            if (location.length=5 && location.match(^[0-9]+$) != null)
             {
                 console.log(number);
                 console.log(location);
