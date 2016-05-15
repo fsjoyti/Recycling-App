@@ -1,9 +1,6 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center !important;
     background-color: #87C287 !important;
     /*background-size: 70%;*/
 }
@@ -22,6 +19,9 @@ a {
 
 .jumbotron {
   background-image: url("../images/recycling-logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center !important;
   background-color: #C4F3BD !important;
   opacity: 0.8;
   text-align: center;
