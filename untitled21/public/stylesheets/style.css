@@ -53,8 +53,11 @@ a {
 .popup-image {
   height: auto;
   width: auto;
+  display: block;
   max-height: 300px;
   max-width: 300px;
+  z-index: 100;
+  position: fixed;
 }
 
 .popupText {

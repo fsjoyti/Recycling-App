@@ -10,6 +10,7 @@
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
           integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+      <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
   </head>
   <body ng-controller="InfoCtrl">
 
@@ -21,23 +22,23 @@
 
     <div class="content">
 
-          <!--<button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#RICModal">What is a RIC number?</button>-->
-          <!--<div id="RICModal" class="modal fade" role="dialog">-->
-                <!--<div class="modal-dialogue">-->
-                    <!--<div class="modal-content">-->
-                        <!--<div class="modal-header">-->
-                            <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
-                        <!--</div>-->
-                        <!--<div class="modal-body">-->
-                            <!--<p>Look for the RIC number on your plastics, surrounded by recycle symbol</p>-->
-                            <!--<img src="../public/images/ric_codes.jpg">-->
-                        <!--</div>-->
-                        <!--<div class="modal-footer">-->
-                            <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-          <!--</div>-->
+          <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#RICModal">What is a RIC number?</button>
+          <div id="RICModal" class="modal fade" role="dialog">
+                <div class="modal-dialogue">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Look for the RIC number on your plastics, surrounded by recycle symbol</p>
+                            <img src="../public/images/ric_codes.jpg">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+          </div>
 
       <div class="popupText" ng-mouseover="showPopup()" ng-mouseleave="hidePopup()">
           What is an RIC code? TEST
@@ -65,13 +66,13 @@
               <button class="btn btn-default" ng-click="getInfo()">Can I Recycle Resin # {{resin.ID}}??</button>
           </div>
 
-          <div class="results">
-              <div class="pass" ng-show="searchPass" ng-hide="searchFail">
+          <div class="results" ng-show="searched">
+              <div class="pass" ng-show="searchPass">
                 <p>"Yes, you CAN recycle this in your zip code!</p>
                 <p>{{centerAddress.address}}</p>
                 <p>{{centerAddress.city}}, WA {{centerAddress.zipcode}}</p>
               </div>
-              <div class="fail" ng-show="searchFail" ng-hide="searchPass">
+              <div class="fail" ng-hide="searchPass">
                   <p>No, sorry, your zip code does not recycle this RIC</p>
               </div>
           </div>
