@@ -78,7 +78,7 @@
                   <input class="form-control" ng-model="resin.location" placeholder="ZIP">
               </div>
               <div class="buttons">
-                  <button class="btn btn-default" ng-click="getInfo()">Can I Recycle RIC {{resin.ID}}?</button>
+                  <button class="btn btn-default" ng-click="getInfo()">Can I recycle this RIC {{resin.ID}}?</button>
               </div>
               <div class="results" ng-show="searched">
                   <div class="pass" ng-show="searchPass"><p>"Yes, you CAN recycle this in your zip code!</p><p>{{centerAddress.address}}</p><p>{{centerAddress.city}}, WA {{centerAddress.zipcode}}</p>
