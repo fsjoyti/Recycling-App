@@ -36,8 +36,16 @@ a {
   width: 10% !important;
   height: auto;
 }
+
 .popup {
     position: absolute;
+}
+
+.popup-image {
+  height: auto;
+  width: auto;
+  max-height: 400px;
+  max-width: 400px;
 }
 
 .content {
