@@ -34,7 +34,7 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
                 }
                 else {
                     $scope.result = "No, sorry, your zip code does not recycle this RIC";
-                    $scope.searchedFail="false";
+                    $scope.searchedFail="true";
                 }
             }, function errorCallback(response) {
                 console.log("Error!");
