@@ -31,10 +31,12 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
                     console.log(response.data.location[0]);
                     $scope.result = "Yes, you CAN recycle this in your zip code!";
                     $scope.searched="true";
+                    $scope.searchedFail="false";
                 }
                 else {
                     $scope.result = "No, sorry, your zip code does not recycle this RIC";
                     $scope.searchedFail="true";
+                    $scope.searched="false";
                 }
             }, function errorCallback(response) {
                 console.log("Error!");
