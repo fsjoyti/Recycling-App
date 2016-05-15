@@ -26,7 +26,7 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
                 params: $scope.data
             }).then(function successCallback(response) {
                 console.log(response);
-                if (response.data > 0) {
+                if (response.data.length > 0) {
                     $result = "Yes, you CAN recycle this in your zip code!";
                 }
                 else {
@@ -47,7 +47,6 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
 
         $scope.hidePopup = function () {
             $scope.popupIsVisible = false;
-            $scope.textIsHidden = false;
             console.log($scope.popupIsVisible);
         };
 
