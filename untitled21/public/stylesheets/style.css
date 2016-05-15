@@ -14,7 +14,8 @@ a {
 }
 
 .content {
-  background-color: #C4F3BD !important;
+  /*background-color: #C4F3BD !important;*/
+  background: rgba(196, 243, 189, .7);
 }
 
 .jumbotron {
