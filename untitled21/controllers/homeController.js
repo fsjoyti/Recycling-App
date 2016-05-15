@@ -3,8 +3,7 @@
  */
 var recycleApp = angular.module('recycleApp', []);
 
-recipeApp.controller('HomeCtrl', ['$scope', '$http',
+recycleApp.controller('InfoCtrl', ['$scope', '$http',
     function($scope, $rootScope, $http){
-
-
-    }]);
+        
+}]);

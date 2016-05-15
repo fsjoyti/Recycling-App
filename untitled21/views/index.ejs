@@ -9,14 +9,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
           integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   </head>
-  <body>
+  <body ng-controller="EntryCtrl">
     <h1>Can I Recycle This?</h1>
-    <div ng-controller="HomeCtrl">
+
+    <div class="entry_info" >
+        <p>Please choose a RESIN number: </p>
+        <ng-option> </ng-option>
+    </div>
+
+    <div class="recycle_info">
 
     </div>
 
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/-route.js"></script>
   <script src="controllers/controller.js"></script>
 </html>
