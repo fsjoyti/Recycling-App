@@ -20,13 +20,6 @@
 
 
     <div class="content">
-      <div class ="selectResin">
-          <p>Select a resin number to get recycling information:
-              <select ng-options="resin for resin in resins" ng-model="resin.number"></select>
-          </p>
-      </div>
-
-
 
           <!--<button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#RICModal">What is a RIC number?</button>-->
           <!--<div id="RICModal" class="modal fade" role="dialog">-->
@@ -53,6 +46,12 @@
           An RIC code can be found on plastics within the universal recycling symbol
          <p> <img class="popup-image" src="../images/ric_codes.jpg"></p>
       </div>
+
+        <div class ="selectResin">
+            <p>Select a resin number to get recycling information:
+                <select ng-options="resin for resin in resins" ng-model="resin.number"></select>
+            </p>
+        </div>
 
       <div class="recycle_info">
 
