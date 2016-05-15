@@ -6,11 +6,12 @@ var recycleApp = angular.module('recycleApp', []);
 recycleApp.controller('InfoCtrl', ['$scope', '$http',
 
     function($scope, $http){
+        console.log("Inside the controller");
 
         $scope.resins = [1, 2, 3, 4, 5, 6, 7];
 
-        var getInfo = function(){
-            console.log($scope.resinID);
+        $scope.getInfo = function(){
+            console.log($scope.resin);
         };
 
     }]);
