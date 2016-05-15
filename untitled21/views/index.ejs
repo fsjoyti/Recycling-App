@@ -2,7 +2,8 @@
 <html ng-app="recycleApp">
   <head>
     <title>Recycle</title>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href='../public/stylesheets/style.css' />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -10,21 +11,41 @@
           integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   </head>
   <body ng-controller="InfoCtrl">
-        <h1>Can I Recycle This?</h1>
-        <div class ="selectResin">
-            <p>Select a resin number to get recycling information:
-            <select ng-options="resin for resin in resins" ng-model="resin.ID">
-                <option value="" disabled selected>Resin</option>
-            </select>
-            </p>
+
+  <div class="container">
+      <div class="jumbotron">
+          <h1>Can I Recycle This?</h1>
+          <p>Set the RIC code and zip code to find out if your plastic product is recyclable in your community!</p>
+      </div>
+      <div class ="selectResin">
+          <p>Select a resin number to get recycling information:
+              <select ng-options="resin for resin in resins" ng-model="resin.ID"></select>
+          </p>
+      </div>
+
+      <div class="buttons">
+          <button class="btn btn-default" ng-click="getInfo()">Can I Recycle??</button>
+      </div>
+
+    <div class="recycle_info">
+
+
+        <div class="selectZIP">
+            <p>Input a ZIP code to find out if this resin # is recyclable in your county</p>
+            <input class="form-control" ng-model="resin.location" placeholder="ZIP">
         </div>
+
         <div class="buttons">
             <button class="btn btn-default" ng-click="getInfo()">Can I Recycle Resin # {{resin.ID}}??</button>
         </div>
 
     <div class="recycle_info">
+
     </div>
 
+
+    </div>
+  </div>
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
