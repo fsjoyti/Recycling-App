@@ -29,7 +29,7 @@ a {
   text-align: center;
   height: 350px !important;
   overflow-y: auto !important;
-  padding-top: 110px !important;
+  padding-top: 80px !important;
   margin-bottom: 0 !important;
   border-radius: 0 !important;
 }
@@ -88,3 +88,8 @@ a {
   width: 450px;
 }
 
+@media screen and (min-width: 200px) {
+  .description {
+    font-size: 20px;
+  }
+}
