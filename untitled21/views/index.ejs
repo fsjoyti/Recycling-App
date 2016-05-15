@@ -42,27 +42,28 @@
       <div class="popupText" ng-mouseover="showPopup()" ng-mouseleave="hidePopup()">
           What is an RIC code? TEST
       </div>
-      <div class="popup" ng-show="popupIsVisible">
-          An RIC code can be found on plastics within the universal recycling symbol
-         <p> <img class="popup-image" src="../images/ric_codes.jpg"></p>
-      </div>
 
-        <div class ="selectResin">
-            <p>Select a resin number to get recycling information:
-                <select ng-options="resin for resin in resins" ng-model="resin.number"></select>
-            </p>
-        </div>
+          <div class="popup" ng-show="popupIsVisible">
+              An RIC code can be found on plastics within the universal recycling symbol
+             <p> <img class="popup-image" src="../images/ric_codes.jpg"></p>
+          </div>
 
-      <div class="recycle_info">
+          <div class ="selectResin">
+              <p>Select a resin number to get recycling information:
+                  <select ng-options="resin for resin in resins" ng-model="resin.number"></select>
+              </p>
+          </div>
 
-        <div class="selectZIP">
-            <p>Input a ZIP code to find out if this resin # is recyclable in your county</p>
-            <input class="form-control" ng-model="resin.location" placeholder="ZIP">
-        </div>
+          <div class="recycle_info">
 
-        <div class="buttons">
-            <button class="btn btn-default" ng-click="getInfo()">Can I Recycle Resin # {{resin.ID}}??</button>
-        </div>
+          <div class="selectZIP">
+              <p>Input a ZIP code to find out if this resin # is recyclable in your county</p>
+              <input class="form-control" ng-model="resin.location" placeholder="ZIP">
+          </div>
+
+          <div class="buttons">
+              <button class="btn btn-default" ng-click="getInfo()">Can I Recycle Resin # {{resin.ID}}??</button>
+          </div>
 
           <div class="results">
               <div class="pass" ng-show="searchPass" ng-hide="searchFail">
@@ -74,6 +75,7 @@
                   <p>No, sorry, your zip code does not recycle this RIC</p>
               </div>
           </div>
+    </div>
     </div>
     </div>
     </div>
