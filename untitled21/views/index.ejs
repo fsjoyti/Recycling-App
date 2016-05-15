@@ -64,15 +64,16 @@
             <button class="btn btn-default" ng-click="getInfo()">Can I Recycle Resin # {{resin.ID}}??</button>
         </div>
 
-          <div class="results" ng-show="searched">
-            <p>{{result}}</p>
-              <p>{{centerAddress.address}}</p>
-              <p>{{centerAddress.city}}, WA {{centerAddress.zipcode}}</p>
+          <div class="results">
+              <div class="pass" ng-show="searchPass">
+                <p>"Yes, you CAN recycle this in your zip code!</p>
+                <p>{{centerAddress.address}}</p>
+                <p>{{centerAddress.city}}, WA {{centerAddress.zipcode}}</p>
+              </div>
+              <div class="fail" ng-show="searchFail">
+                  <p>No, sorry, your zip code does not recycle this RIC</p>
+              </div>
           </div>
-
-          <div class="results" ng-show="searchedFail">
-              <p>{{result}}</p>
-      </div>
     </div>
     </div>
     </div>
