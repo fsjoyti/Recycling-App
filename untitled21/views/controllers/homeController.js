@@ -19,4 +19,14 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
             });*/
         };
 
+        $scope.showPopup = function() {
+            $scope.popupIsVisible = true;
+            console.log($scope.popupIsVisible);
+        };
+
+        $scope.hidePopup = function () {
+            $scope.popupIsVisible = false;
+            console.log($scope.popupIsVisible);
+        };
+
     }]);

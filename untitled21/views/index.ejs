@@ -23,9 +23,16 @@
           </p>
       </div>
 
-      <div class="buttons">
-          <button class="btn btn-default" ng-click="getInfo()">Can I Recycle??</button>
+      <div class="popupText" ng-mouseover="showPopup()" ng-mouseleave="hidePopup()">
+          What is a RIC code?
       </div>
+      <div class="popup" ng-show="popupIsVisible">
+          <img src="../public/images/ric_codes.jpg">
+      </div>
+
+      <!--<div class="buttons">-->
+          <!--<button class="btn btn-default" ng-click="getInfo()">Can I Recycle??</button>-->
+      <!--</div>-->
 
     <div class="recycle_info">
 
