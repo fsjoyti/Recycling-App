@@ -30,9 +30,11 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
                     $scope.centerAddress = response.data.location[0];
                     console.log(response.data.location[0]);
                     $scope.searchPass="true";
+                    $scope.searched="true"
                 }
                 else {
                     $scope.searchpass="false";
+                    $scope.searched="true";
                 }
             }, function errorCallback(response) {
                 console.log("Error!");
