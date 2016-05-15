@@ -12,16 +12,11 @@ var ResinSchema = new Schema({
     description:String,
     examples : {type:Array},
     location :{type:Array}
-
-
-
-
-
-
-
 });
 
 var Recycling = mongoose.model('Recycling', ResinSchema);
+
+
 
 var recycle3 = new Recycling(
     {

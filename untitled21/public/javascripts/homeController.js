@@ -19,14 +19,6 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
             $scope.data= {number:number,location:location}
             console.log($scope.data);
 
-            /*
-            $http.get("/recycling", $scope.resin).success(function(response){
-                console.log("I got the data I requested");
-                $scope.recycleInfo = response;
-                console.log(response);
-            });
-            */
-
             
             $http({
                 url: '/recycling' ,
@@ -34,7 +26,7 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
                 params: $scope.data
             }).then(function successCallback(response) {
                 console.log(response);
-               
+               $result = response;
                 // this callback will be called asynchronously
                 // when the response is available
             }, function errorCallback(response) {
@@ -48,7 +40,7 @@ recycleApp.controller('InfoCtrl', ['$scope', '$http',
 
         $scope.showPopup = function() {
             $scope.popupIsVisible = true;
-            $scop.textIsHidden = true;
+            $scope.textIsHidden = true;
             console.log($scope.popupIsVisible);
         };
 
