@@ -9,6 +9,7 @@ Most plastic products have an RIC, which is often on the bottom, surrounded by a
 * The user can select the RIC of their plastic and the zip code they are hoping to recycle it in
 * The application will return whether or not the item is recyclable in that zip code
 * If the item is recyclable, the application will provide the address of the nearest recycling center
+* Responsive design
 
 ## Technologies used
   * MEAN Stack
