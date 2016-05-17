@@ -4,8 +4,11 @@ This web application helps a user to determine if a plastic product is recyclabl
 
 Most plastic products have an RIC, which is often on the bottom, surrounded by a chasing arrows symbol and molded, formed or imprinted in or on the container. These RICs range from 1 to 7 and are used to identify the material from which an item is made, to facilitate easier recycling or other reprocessing. These codes are not a guarantee that the item can be recycled, as not all recycling facilities can handle all RICs.
 
-
-
+## Application Features
+* Information about RIC codes
+* The user can select the RIC of their plastic and the zip code they are hoping to recycle it in
+* The application will return whether or not the item is recyclable in that zip code
+* If the item is recyclable, the application will provide the address of the nearest recycling center
 
 ## Technologies used
   * MEAN Stack
